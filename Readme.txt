@@ -1,0 +1,1 @@
+This repository consists of codes for analyzing RNA-seq data generated from head and testis tissues of housefly. The raw RNA-seq data are available from NCBI Gene Expression Omnibus accession GSE136188. Additional files used for analysis can be accessed from Texas Data Repository under https://doi.org/10.18738/T8/D14TGI
