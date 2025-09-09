@@ -1,6 +1,6 @@
 #########Downstream processing of count data in R
 
-#reading data into R
+## reading data into R
 
 CSrab18H1<-read.table("htseq_CSrab-18C-H1.txt", header = FALSE, col.names = c("Gene", "CSrab18H1"))
 CSrab18H2<-read.table("htseq_CSrab-18C-H2.txt", header = FALSE, col.names = c("Gene", "CSrab18H2"))
@@ -16,7 +16,7 @@ IsoCS29H2<-read.table("htseq_IsoCS-29C-H2.txt", header = FALSE, col.names = c("G
 IsoCS29H3<-read.table("htseq_IsoCS-29C-H3.txt", header = FALSE, col.names = c("Gene", "IsoCS29H3"))
 
 
-#merging data into a single table
+## merging data into a single table
 
 all.htseq__head<- merge(CSrab18H1, CSrab18H2, by = "Gene",all = TRUE)
 all.htseq__head<- merge(all.htseq__head, CSrab18H3, by = "Gene", all = TRUE)
