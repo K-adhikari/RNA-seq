@@ -1,4 +1,4 @@
-#### #####Downstream processing of count data in R
+#########Downstream processing of count data in R
 
 #reading data into R
 
