@@ -1,6 +1,6 @@
-#########Downstream processing of count data in R
+######### Downstream processing of count data in R
 
-###reading data into R
+### reading data into R
 
 CSrab18T1<-read.table("htseq_CSrab-18C-T1.txt", header = FALSE, col.names = c("Gene", "CSrab18T1"))
 CSrab18T2<-read.table("htseq_CSrab-18C-T2.txt", header = FALSE, col.names = c("Gene", "CSrab18T2"))
@@ -16,7 +16,7 @@ IsoCS29T2<-read.table("htseq_IsoCS-29C-T2.txt", header = FALSE, col.names = c("G
 IsoCS29T3<-read.table("htseq_IsoCS-29C-T3.txt", header = FALSE, col.names = c("Gene", "IsoCS29T3"))
 
 
-###merging data into a single table
+### merging data into a single table
 
 all.htseq__testes<- merge(CSrab18T1, CSrab18T2, by = "Gene",all = TRUE)
 all.htseq__testes<- merge(all.htseq__testes, CSrab18T3, by = "Gene", all = TRUE)
@@ -33,7 +33,7 @@ all.htseq__testes<- merge(all.htseq__testes, IsoCS29T3, by = "Gene", all = TRUE)
 library(DESeq2)
 
 
-###removing first five rows that contains data not being considered for analysis
+### removing first five rows that contains data not being considered for analysis
 
 all.htseq__testes<- all.htseq__testes[-1:-5, ]
 
@@ -109,13 +109,13 @@ plotPCA(rld, intgroup= c("Temperature", "Genotype"), ntop=500)  ### Using top 50
 
 
 ### Heatmap of sample to sample distance
-##calculate the distance
+## calculate the distance
 
 rld<- rlog(dds)
 Dis<- dist(t(assay(rld)))
 
 
-##heatmap
+## heatmap
 library("RColorBrewer")
 
 DistMatrix <- as.matrix(Dis)
